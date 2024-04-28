@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RentCar Luxury - Lambo</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="index.html">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Ferrari</a></li>
+                <li> <a href="#portafolio">Portafolio</a></li>
+                <li><a href="#clientes">Servicios</a></li>
+                <li class="contacto"> <a href="#footer">Contacto</a>
+                    <ul class="formulario">
+                        <li><a href="">lambo</a></li>
+                        <li><a href="ferrari.html">ferrari</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="textos-header" id="textos-header">
+            <h1>COMPLETA TUS SENTIDOS</h1>
+            <h2>
+                Descubra lo último en alquiler de coches de lujo con RentCar Luxury en
+                España
+            </h2>
+        </section>
+    </header>
+    <main>
+        <section class="formulario-container lamb" id="sobre-nosotros">
+            <div class="container">
+                <h1>Reserva tu Lamborghini</h1>
+                <form action="/submit-your-order" method="POST" class="form-ferrari">
+                    <section class="personal-info">
+                        <h2>Información Personal</h2>
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                    </section>
+
+                    <section class="vehicle-details">
+                        <h2>Detalles del Vehículo</h2>
+                        <div class="form-group">
+                            <label for="modelo">Modelo:</label>
+                            <select id="modelo" name="modelo" required>
+                                <option value="F8 Tributo">F8 Tributo</option>
+                                <option value="488 Pista">488 Pista</option>
+                                <option value="Portofino M">Portofino M</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="color">Color:</label>
+                            <input type="color" id="color" name="color" value="#ff0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="interior">Interior:</label>
+                            <select id="interior" name="interior">
+                                <option value="cuero">Cuero</option>
+                                <option value="alcantara">Alcantara</option>
+                            </select>
+                        </div>
+                    </section>
+                    <button type="submit">Enviar Pedido</button>
+                    <button type="reset">Borrar</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="portafolio" id="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Portafolio</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="img/imagen1.jpg" alt="" />
+                        <div class="hover-galeria">
+                            <img src="img/icons8-coche-80.png" alt="" />
+                            <p>Elije un coche</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/imagen2.jpg" alt="" />
+                        <div class="hover-galeria">
+                            <img src="img/icons8-coche-80.png" alt="" />
+                            <p>Elije un coche</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/imagen3.jpg" alt="" />
+                        <div class="hover-galeria">
+                            <img src="img/icons8-coche-80.png" alt="" />
+                            <p>Elije un coche</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/imagen4.jpg" alt="" />
+                        <div class="hover-galeria">
+                            <img src="img/icons8-coche-80.png" alt="" />
+                            <p>Elije un coche</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/imagen5.jpg" alt="" />
+                        <div class="hover-galeria">
+                            <img src="img/icons8-coche-80.png" alt="" />
+                            <p>Elije un coche</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/imagen6.jpg" alt="" />
+                        <div class="hover-galeria">
+                            <img src="img/icons8-coche-80.png" alt="" />
+                            <p>Elije un coche</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/imagen7.jpg" alt="" />
+                        <div class="hover-galeria">
+                            <img src="img/icons8-coche-80.png" alt="" />
+                            <p>Elije un coche</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/imagen8.jpg" alt="" />
+                        <div class="hover-galeria">
+                            <img src="img/icons8-coche-80.png" alt="" />
+                            <p>Elije un coche</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clientes contenedor" id="clientes">
+            <h2 class="titulo">Que dicen nuestros clientes</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/persona1.jpg" alt="" />
+                    <div class="contenido-texto-card">
+                        <h4>Nombre</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Asperiores, veritatis?
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/persona2.jpg" alt="" />
+                    <div class="contenido-texto-card">
+                        <h4>Nombre</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Asperiores, veritatis?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-services">
+            <div class="contenedor">
+                <h2 class="titulo">Nuestros vehiculos</h2>
+                <div class="servicio-cont">
+                    <div class="servicio-ind">
+                        <img src="img/ilustracion3.png" alt="" />
+                        <h3>Name</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci, ut?
+                        </p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="img/ilustracion1.png" alt="" />
+                        <h3>Name</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci, ut?
+                        </p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="img/ilustracion2.png" alt="" />
+                        <h3>Name</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci, ut?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer" id="footer">
+            <div class="content-foo">
+                <h4>phone</h4>
+                <p>654987321</p>
+            </div>
+            <div class="content-foo">
+                <h4>email</h4>
+                <p>email@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Location</h4>
+                <p>asdasaasdad</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; BryanPA &copy; AndresMM | Luxury Car</h2>
+    </footer>
+</body>
+
+</html>
