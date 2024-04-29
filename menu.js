@@ -1,10 +1,10 @@
-// Selecciona el elemento del DOM con el ID 'menu' y lo asigna a la variable 'nav'.
+// Selecciona el primer elemento dentro del documento HTML que tiene el ID menu. y lo asigna a la variable 'nav'.
 const nav = document.querySelector("#menu");
 
-// Selecciona el elemento del DOM con el ID 'abrir' y lo asigna a la variable 'abrir'.
+// De manera similar, esto selecciona el elemento con el ID abrir
 const abrir = document.querySelector("#abrir");
 
-// Selecciona el elemento del DOM con el ID 'cerrar' y lo asigna a la variable 'cerrar'.
+// Esto selecciona el elemento con el ID cerrar
 const cerrar = document.querySelector("#cerrar");
 
 // Añade un escuchador de eventos al botón 'abrir' para detectar clics.
