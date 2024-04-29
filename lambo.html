@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Para el icono del menú-->
+    <script src="https://kit.fontawesome.com/22bbb940c3.js" crossorigin="anonymous"></script>
+
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <title>RentCar Luxury - Lambo</title>
@@ -12,7 +15,11 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <button class="abrir-menu" id="abrir"><i class="fa fa-bars" style="font-size:24px;"></i></button>
+            <ul class="menu" id="menu">
+                <button class="cerrar-menu" id="cerrar">
+                    <i class="fa fa-xmark" style="font-size:24px;"></i>
+                </button>
                 <li> <a href="index.html">Inicio</a></li>
                 <li><a href="#sobre-nosotros">Ferrari</a></li>
                 <li> <a href="#portafolio">Portafolio</a></li>
@@ -35,7 +42,7 @@
     </header>
     <main>
         <section class="formulario-container lamb" id="sobre-nosotros">
-            <div class="container">
+            <div class="contenedor">
                 <h1>Reserva tu Lamborghini</h1>
                 <form action="/submit-your-order" method="POST" class="form-ferrari">
                     <section class="personal-info">
@@ -220,6 +227,7 @@
         </div>
         <h2 class="titulo-final">&copy; BryanPA &copy; AndresMM | Luxury Car</h2>
     </footer>
+    <script src="menu.js"></script>
 </body>
 
 </html>

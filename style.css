@@ -1,4 +1,7 @@
+/* Esta propiedad importa fuentes externas de Google Fonts. Es útil para incluir tipografías personalizadas que no están disponibles en la mayoría de los dispositivos por defecto. */
 @import url("https://fonts.googleapis.com/css2?family=Jersey+25&family=Sedan:ital@0;1&display=swap");
+
+/* Define una animación llamada slideDown que mueve un elemento desde fuera de la vista (arriba) hacia su posición normal, cambiando también su opacidad de invisible (0) a completamente visible (1). Esta técnica es frecuentemente utilizada para animaciones de entrada. */
 @keyframes slideDown {
   from {
     transform: translateY(
@@ -63,11 +66,17 @@ nav {
   background-color: #808080;
   animation: slideDown 2s ease forwards;
 }
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
 nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: right;
 }
 nav ul li > a {
   font-weight: 300;
@@ -89,16 +98,18 @@ nav ul li > a:hover {
   position: absolute;
   margin-top: 5px;
   transform: translateX(10%); /* Ajusta la posición precisa del menú */
-  width: auto; /* O define un ancho específico si lo prefieres */
+  width: auto;
 }
 
 .formulario > li {
   border-bottom: 1px solid #fff;
   background-color: #808080;
   height: 60px;
+  width: 100px;
   line-height: 60px; /* Esta propiedad centra el texto verticalmente */
   text-align: center;
   margin: 0;
+  transform: translateY(25%); /* Ajusta la posición precisa del menú */
   padding: 0;
 }
 
@@ -129,7 +140,7 @@ main .sobre-nosotros {
 }
 .contenedor-sobre-nosotros {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly; /* asegura un espaciado equitativo entre elementos en un contenedor Flexbox */
 }
 .imagen-about.us {
   width: 48%;
@@ -165,6 +176,7 @@ main .sobre-nosotros {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  /* La propiedad CSS flex-wrap: wrap; en un contenedor Flexbox permite que los elementos internos se ajusten dentro del contenedor, pasando a la siguiente línea si no hay suficiente espacio en la actual. Esto es útil para mantener los elementos organizados y visibles, especialmente en diseños responsivos. */
 }
 
 .imagen-port {
@@ -172,6 +184,7 @@ main .sobre-nosotros {
   margin-bottom: 10px;
   height: 180px;
   overflow: hidden;
+  /* La propiedad CSS overflow: hidden; se utiliza para recortar el contenido que excede el área asignada de un elemento, ocultando cualquier parte del contenido que no quepa dentro de sus dimensiones establecidas. Esto puede ser útil para evitar desbordamientos no deseados en la interfaz de usuario, manteniendo un diseño limpio y ordenado. */
   position: relative;
   cursor: pointer;
   box-shadow: 0 0 6px 0 rgb(0, 0, 0.5);
@@ -312,6 +325,7 @@ footer {
   color: black;
 }
 /* ------------------------------------------------------------ */
+/*----------------CSS Formularios---------------------------*/
 /* ------------------------------------------------------------ */
 .formulario-container {
   height: 100%;
@@ -333,6 +347,11 @@ footer {
   padding: 15px 0;
   text-transform: uppercase;
 }
+.contenedor {
+  max-width: 800px;
+  padding: 2rem;
+  width: 90%;
+}
 .lamb {
   background: -webkit-linear-gradient(
       to right,
@@ -345,19 +364,6 @@ footer {
 
   background-size: cover;
   background-attachment: fixed;
-}
-.container {
-  width: 90%;
-  max-width: 800px;
-  background: #212121;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(246, 246, 246, 0.6);
-}
-
-h1,
-h2 {
-  color: #ebeae5; /* Gold color to add luxury feel */
 }
 
 .form-ferrari {
@@ -378,17 +384,17 @@ h2 {
   margin-bottom: 15px;
 }
 
-label {
+.form-group label {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-input[type="color"] {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group input[type="color"] {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
@@ -396,7 +402,7 @@ input[type="color"] {
   background: #fff;
   color: #333;
 }
-button {
+.form-ferrari button {
   background-color: #808080;
   color: rgb(253, 253, 253);
   border: none;
@@ -409,22 +415,25 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-button:hover {
+.form-ferrari button:hover {
   background-color: #20a00071;
 }
-button[type="reset"] {
+.form-ferrari button[type="reset"] {
   background-color: #808080;
 }
-button[type="reset"]:hover {
+.form-ferrari button[type="reset"]:hover {
   background-color: #9e00005d;
 }
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* -------------------CSS RESPONSIVE---------------------- */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
 @media screen and (max-width: 900px) {
   header {
     background-position: center;
   }
-  nav > a {
+  nav ul li > a {
     font-size: 0.8em;
   }
   nav {
@@ -483,12 +492,49 @@ button[type="reset"]:hover {
   }
 }
 
-@media screen and (max-width: 500px) {
-  nav {
-    display: none;
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.25rem;
+    cursor: pointer;
   }
+  .abrir-menu {
+    position: absolute;
+    right: 20px;
+  }
+  .cerrar-menu {
+    color: #ecececec;
+  }
+  .menu {
+    opacity: 0;
+    visibility: hidden;
 
-  .textos-header h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  .menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+  }
+  .menu li {
+    padding: 15px;
+  }
+  .menu li a {
+    color: #ecececec;
+  }
+  nav .textos-header h1 {
     font-size: 35px;
   }
 
